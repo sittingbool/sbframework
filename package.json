@@ -1,0 +1,31 @@
+{
+  "name": "sbframework",
+  "version": "0.1.0",
+  "description": "A universal lightweight and modular framework for microservice apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test -ws"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sittingbool/sbframework.git"
+  },
+  "keywords": [
+    "microservice",
+    "framework",
+    "API",
+    "fastify",
+    "mongodb",
+    "light",
+    "lightweight",
+    "cloud",
+    "aws",
+    "azure"
+  ],
+  "author": "sittingbool (chief@sittingbool.tech)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sittingbool/sbframework/issues"
+  },
+  "homepage": "https://github.com/sittingbool/sbframework#readme"
+}
