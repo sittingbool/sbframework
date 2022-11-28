@@ -2,7 +2,8 @@
   "name": "sbframework",
   "version": "0.1.0",
   "description": "A universal lightweight and modular framework for microservice apps",
-  "main": "index.js",
+  "type": "module",
+  "private": false,
   "scripts": {
     "test": "npm run test -ws"
   },
@@ -22,10 +23,26 @@
     "aws",
     "azure"
   ],
+  "workspaces": [
+    "./packages/cli",
+    "./packages/core",
+    "./packages/database/*",
+    "./packages/fastify/*"
+  ],
   "author": "sittingbool (chief@sittingbool.tech)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sittingbool/sbframework/issues"
   },
-  "homepage": "https://github.com/sittingbool/sbframework#readme"
+  "homepage": "https://github.com/sittingbool/sbframework#readme",
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/jsdoc-to-markdown": "^7.0.3",
+    "@types/node": "^16.18.3",
+    "jsdoc-to-markdown": "^8.0.0"
+  },
+  "dependencies": {
+    "fs-extra": "^10.1.0",
+    "prettier": "^2.8.0"
+  }
 }

@@ -1,0 +1,29 @@
+# IDE
+.idea
+.DS_Store
+
+# Build results
+**/*/dist/
+.service.tmpl/**/*.js
+
+# Yarn
+.yarn/*
+#!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+#NPM
+node_modules
+*.tgz
+
+# Database
+*.db
+.docker-data/
+
+# ENV
+.docker-compose.env
+.mock.env
+reload.sh
+proxy/
