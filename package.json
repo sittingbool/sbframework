@@ -27,7 +27,8 @@
     "./packages/cli",
     "./packages/core",
     "./packages/database/*",
-    "./packages/fastify/*"
+    "./packages/fastify/*",
+    "./packages/storage/*"
   ],
   "author": "sittingbool (chief@sittingbool.tech)",
   "license": "MIT",
@@ -36,9 +37,11 @@
   },
   "homepage": "https://github.com/sittingbool/sbframework#readme",
   "devDependencies": {
+    "@types/chai": "^4.3.4",
     "@types/fs-extra": "^9.0.13",
     "@types/jsdoc-to-markdown": "^7.0.3",
     "@types/node": "^16.18.3",
+    "chai": "^4.3.7",
     "jsdoc-to-markdown": "^8.0.0"
   },
   "dependencies": {
