@@ -71,3 +71,16 @@ export async function filterAsync(array: any[], filter: (item: any) => Promise<b
     }
     return retArray;
 }
+
+/**
+ * finds the closest value in the array to the given value
+ * @param value - the value to find the closest value for
+ * @param candidates - the array of candidates to find the closest value in
+ */
+export function findClosestValueTo(value: number, candidates: number[]): number {
+    let closest = candidates[0];
+    for (const candidate of candidates) {
+        if (Math.abs(candidate - value) < Math.abs(closest - value)) closest = candidate;
+    }
+    return closest;
+}
