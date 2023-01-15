@@ -29,3 +29,7 @@ export function randomString(length: number, chars: string = RANDOMIZE_CHARSET_D
 export function randomNumberForRange(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+export function randomFromArray<T>(array: T[]): T {
+    return array[Math.floor(Math.random() * array.length)];
+}
