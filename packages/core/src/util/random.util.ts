@@ -30,11 +30,11 @@ export function randomNumberForRange(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-export function randomFromArray<T>(array: T[]): T {
-    let index = 0;
-    do {
-        // otherwise this sometimes creates a non-integer index
-        index = Math.floor(Math.random() * array.length);
-    } while (index < 0 || index >= array.length || !Number.isInteger(index));
-    return array[index];
+/**
+ * Returns a random element from the given array
+ * @param array - the array to get a random element from
+ */
+export function randomFromArray<T>(array: T[]): T | null {
+    if (array.length === 0) return null;
+    return array[Math.floor(Math.random() * array.length)];
 }
