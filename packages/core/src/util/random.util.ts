@@ -31,5 +31,10 @@ export function randomNumberForRange(min: number, max: number): number {
 }
 
 export function randomFromArray<T>(array: T[]): T {
-    return array[Math.floor(Math.random() * array.length)];
+    let index = 0;
+    do {
+        // otherwise this sometimes creates a non-integer index
+        index = Math.floor(Math.random() * array.length);
+    } while (index < 0 || index >= array.length || !Number.isInteger(index));
+    return array[index];
 }
