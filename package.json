@@ -37,15 +37,18 @@
   },
   "homepage": "https://github.com/sittingbool/sbframework#readme",
   "devDependencies": {
-    "@types/chai": "^4.3.4",
-    "@types/fs-extra": "^9.0.13",
-    "@types/jsdoc-to-markdown": "^7.0.3",
-    "@types/node": "^16.18.3",
-    "chai": "^4.3.7",
-    "jsdoc-to-markdown": "^8.0.0"
+    "@testdeck/mocha": "^0.3.3",
+    "@types/chai": "^5.0.1",
+    "@types/fs-extra": "^11.0.4",
+    "@types/jsdoc-to-markdown": "^7.0.6",
+    "@types/node": "^22.10.0",
+    "chai": "^5.1.2",
+    "jsdoc-to-markdown": "^9.0.5",
+    "lerna": "^8.1.9",
+    "mocha": "^10.8.2",
+    "prettier": "^3.4.1"
   },
   "dependencies": {
-    "fs-extra": "^10.1.0",
-    "prettier": "^2.8.0"
+    "fs-extra": "^11.2.0"
   }
 }

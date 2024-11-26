@@ -13,15 +13,13 @@ export function stringIsEmpty(string: string | undefined): boolean {
  * @returns {string} - string as given just with capital first letter
  */
 export function capitalize(string: string): string {
-    let firstChar;
-
-    if (stringIsEmpty(string)) {
+    if (stringIsEmpty(string.trim())) {
         return string;
     }
 
-    firstChar = string.charAt(0);
+    const firstChar = string.charAt(0);
 
-    string = string.substr(1);
+    string = string.substring(1);
 
     string = firstChar.toUpperCase() + string;
 
@@ -34,15 +32,13 @@ export function capitalize(string: string): string {
  * @returns {string} - string as given just with lowercase first letter
  */
 export function deCapitalize(string: string): string {
-    let firstChar;
-
-    if (stringIsEmpty(string)) {
+    if (stringIsEmpty(string.trim())) {
         return string;
     }
 
-    firstChar = string.charAt(0);
+    const firstChar = string.charAt(0);
 
-    string = string.substr(1);
+    string = string.substring(1);
 
     string = firstChar.toLowerCase() + string;
 
@@ -56,14 +52,13 @@ export function deCapitalize(string: string): string {
  * @returns {string} - the plural english word
  */
 export function pluralize(string: string): string {
-    let lastChar,
-        pluralChar = 's';
+    let pluralChar = 's';
 
-    if (stringIsEmpty(string)) {
+    if (stringIsEmpty(string.trim())) {
         return string;
     }
 
-    lastChar = string.charAt(string.length - 1);
+    const lastChar = string.charAt(string.length - 1);
 
     switch (lastChar) {
         case 's':
@@ -106,7 +101,7 @@ export function stripString(value: string, allowedChars: string | string[], case
  * checks how often an expression can be found in a string
  * @param value - the string to be looking into
  * @param expression - the RegExp or string that should be searched for
- * @param caseSensitive - if expression is a string this can be to true if you need to check case sensitive
+ * @param caseSensitive - if expression is a string this can be to true if you need to check case-sensitive
  * @returns {number} - the number of times the expression was found
  */
 export function numberOfMatches(value: string, expression: RegExp | string, caseSensitive = false): number {
