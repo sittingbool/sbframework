@@ -44,3 +44,15 @@ export function prefixObjectKeys(data: any, prefix: string): any {
     }
     return result;
 }
+
+/**
+ * a tyoe to describe a map as in Java
+ */
+export interface IMap<T = string> {
+    [key: string]: T;
+}
+
+/**
+ * a type to describe a map with any value
+ */
+export type IMapAny = IMap<any>;
